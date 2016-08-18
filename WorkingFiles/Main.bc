@@ -13,3 +13,4 @@ public class Main {
        5: invokevirtual #4                  // Method java/io/PrintStream.print:(Ljava/lang/String;)V
        8: return
 }
+reload
