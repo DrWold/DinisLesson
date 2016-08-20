@@ -22,7 +22,7 @@ public class VariablesWork2 {
         int bottleThree;
 
 
-       bottleTwo = (bottleThree = bottleOne) + bottleTwo;
+        bottleTwo = (bottleThree = bottleOne) + bottleTwo;
 
         System.out.println(bottleOne + " " + bottleTwo  + " " + bottleThree);
     }
