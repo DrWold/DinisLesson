@@ -13,17 +13,12 @@ public class PrintWork2 {
     public static void main(String[] args) {
 
         System.out.println("\tNumber\t**\tHuman\t**\tRank\t**");
-        System.out.println("\t1\t**\tDerain\t**\tSoldier\t**");
-        System.out.println("\t2\t**\tMari\t**\tLieutenant\t**");
-        System.out.println("\t3\t**\tMaider\t**\tGeneral\t**");
-        System.out.println("\t4\t**\tWold\t**\tColonel\t**");
-        System.out.println("\t5\t**\tbill\t**\tCaptain\t**");
-        System.out.println("\t6\t**\tJohn\t**\tOfficer\t**");
-
-
-
-
-
+        System.out.println("\t1\t\t**\tDerain\t**\tSoldier\t**");
+        System.out.println("\t2\t\t**\tMari\t**\tLieutenant\t**");
+        System.out.println("\t3\t\t**\tMaider\t**\tGeneral\t**");
+        System.out.println("\t4\t\t**\tWold\t**\tColonel\t**");
+        System.out.println("\t5\t\t**\tbill\t**\tCaptain\t**");
+        System.out.println("\t6\t\t**\tJohn\t**\tOfficer\t**");
 
     }
 
