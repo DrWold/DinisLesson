@@ -15,6 +15,16 @@ public class VariablesWork2 {
 
     public static void main(String[] args) {
 
+        int bottel_one;
+        int bottel_two;
+        int bottel_three;
+        bottel_one = 10;
+        bottel_two = 5;
+        bottel_three = 0;
+
+       bottel_two = (bottel_three = bottel_one) + bottel_two;
+
+        System.out.println(bottel_two);
     }
 
 }
