@@ -14,7 +14,12 @@ package lessons.lesson002.home.work;
 public class VariablesWork3 {
 
     public static void main(String[] args) {
+        int b = 20;
+        int a = 10;
 
+        System.out.println(" Прости денис незнаю как решить ((((( ");
+
+        System.err.println(a +" " + b );
     }
 
 }
