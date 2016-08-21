@@ -15,22 +15,22 @@ public class VariablesWork1 {
     public static void main(String[] args) {
 
 
-        int wellet = 5000;
-        //system.err.println("Сейчас в кошельке " + wellet);
+        int wallet = 5000;
+        //system.err.println("Сейчас в кошельке " + wallet);
 
         System.out.println("Купил телефон из мтс 2500 ");
 
-        wellet = wellet - 2500;
+        wallet = wallet - 2500;
 
-        System.out.println("Посмотрел в кошелек в кошельке " + wellet);
+        System.out.println("Посмотрел в кошелек в кошельке " + wallet);
         System.out.println("зашел в банк ");
         System.out.println("Получил 500 руб УРАААААААА");
-         wellet = wellet - 500;
+         wallet = wallet - 500;
 
-        System.out.println("положил в кошелек считаешь в кошельке" + wellet);
+        System.out.println("положил в кошелек считаешь в кошельке" + wallet);
         System.out.println("прибежала жена схватила кошелек ");
-        wellet = wellet - wellet;
-        System.out.println("Вернула обратно открывайте кашелек " + wellet );
+        wallet = 0;
+        System.out.println("Вернула обратно открывайте кашелек " + wallet);
         System.out.println("За то у вас теперь есть кракодилавая барседка");
 }
 }
