@@ -21,6 +21,14 @@ public class PrintWork {
         System.err.println("#\tЛев Зазерский\t\t\t\t\t\t\t\t\t\t#");
         System.err.println("##########################################################");
 
+        System.out.println("########################Четверостишье####################");
+        System.out.println("#\tВсю жизнь мы теряем кого-то –\t\t\t\t\t\t#");
+        System.out.println("#\tКто раньше уходит, кто позже\t\t\t\t\t\t#");
+        System.out.println("#\tИх нет. И остались пустоты –\t\t\t\t\t\t#");
+        System.out.println("#\tНе дай Бог от тех, кто моложе.\t\t\t\t\t\t#");
+        System.out.println("#\tЛев Зазерский\t\t\t\t\t\t\t\t\t\t#");
+        System.out.println("##########################################################");
+
 
     }
 
