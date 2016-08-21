@@ -13,7 +13,13 @@ public class PrintWork {
 
     public static void main(String[] args) {
 
-        //Писать тут:
+        System.err.println("########################Четверостишье####################");
+        System.err.println("#\tВсю жизнь мы теряем кого-то –\t\t\t\t\t\t#");
+        System.err.println("#\tКто раньше уходит, кто позже\t\t\t\t\t\t#");
+        System.err.println("#\tИх нет. И остались пустоты –\t\t\t\t\t\t#");
+        System.err.println("#\tНе дай Бог от тех, кто моложе.\t\t\t\t\t\t#");
+        System.err.println("#\tЛев Зазерский\t\t\t\t\t\t\t\t\t\t#");
+        System.err.println("##########################################################");
 
 
     }
