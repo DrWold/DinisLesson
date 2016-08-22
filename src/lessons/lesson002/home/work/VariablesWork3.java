@@ -5,7 +5,7 @@ package lessons.lesson002.home.work;
 //В переменной a = 10;
 //В переменной b = 20;
 
-//Необходимо чтобы в a было 20; а в b было 10;
+//Необходимо чтобы в a было 20; а в b было 10; swap
 
 //Прямое решение
 //a = 20;
@@ -16,10 +16,17 @@ public class VariablesWork3 {
     public static void main(String[] args) {
         int b = 20;
         int a = 10;
+        int c = 0;
 
         System.out.println(" Прости денис незнаю как решить ((((( ");
 
-        System.err.println(a +" " + b );
+        System.out.println(a +" " + b );
+
+        c = b;
+        b = a;
+        a = c;
+
+        System.out.println(a +" " + b );
     }
 
 }
