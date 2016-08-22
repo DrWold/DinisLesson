@@ -19,19 +19,27 @@ public class VariablesWork2 {
 
         int jar1 = 10;
         int jar2 = 5;
-        int jar3 = 0 ;
+        int jar3 = 0;
 
-        System.out.println("первый сосуд до перелива в 3 " + jar1);
-        jar1 = jar1 - 10;
-        System.out.println("первый сосуд после перелива " + jar1);
-        System.out.println("третий сосуд до перелива " + jar3);
-        jar3 = jar3 + 10;
-        System.out.println("третий сосуд после перелива " + jar3);
-        jar3 = jar3 - 10;
-        System.out.println("Третий сосуд после перелива в 2 сосуд " + jar3);
-        System.out.println("второй сосуд до залива " + jar2);
-        jar2 = jar2 + 10;
-        System.out.println("второй сосуд после залива " + jar2);
+
+        System.out.println("Jar1 : " + jar1 + "; Jar2 : " + jar2 + "; Jar3 : " + jar3);
+        jar3 = jar1;
+        jar1 = 0;
+        System.out.println("Jar1 : " + jar1 + "; Jar2 : " + jar2 + "; Jar3 : " + jar3);
+        jar2 = jar2 + jar3;
+        jar3 = 0;
+        System.out.println("Jar1 : " + jar1 + "; Jar2 : " + jar2 + "; Jar3 : " + jar3);
+        //System.out.println("первый сосуд до перелива в 3 " + jar1);
+//        jar1 = jar1 - 10;
+//        System.out.println("первый сосуд после перелива " + jar1);
+//        System.out.println("третий сосуд до перелива " + jar3);
+//        jar3 = jar3 + 10;
+//        System.out.println("третий сосуд после перелива " + jar3);
+//        jar3 = jar3 - 10;
+//        System.out.println("Третий сосуд после перелива в 2 сосуд " + jar3);
+//        System.out.println("второй сосуд до залива " + jar2);
+//        jar2 = jar2 + 10;
+//        System.out.println("второй сосуд после залива " + jar2);
 
 
 
