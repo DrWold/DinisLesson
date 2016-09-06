@@ -19,7 +19,7 @@ public class PrintWork2 {
         System.out.println("\t4\t\t**\tWold\t**\tColonel\t\t**");
         System.out.println("\t5\t\t**\tbill\t**\tCaptain\t\t**");
         System.out.println("\t6\t\t**\tJohn\t**\tOfficer\t\t**");
-
+        System.out.printf("test");
     }
 
 }
