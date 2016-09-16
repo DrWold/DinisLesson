@@ -20,12 +20,12 @@ public class VariablesWork1 {
 
         System.out.println("Купил телефон из мтс 2500 ");
 
-        wallet = wallet - 2500;
+        wallet -=  2500;
 
         System.out.println("Посмотрел в кошелек в кошельке " + wallet);
         System.out.println("зашел в банк ");
         System.out.println("Получил 500 руб УРАААААААА");
-         wallet = wallet + 500;
+         wallet += 500;
 
         System.out.println("положил в кошелек считаешь в кошельке " + wallet);
         System.out.println("прибежала жена схватила кошелек ");
