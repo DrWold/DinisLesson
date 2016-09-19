@@ -25,15 +25,18 @@ public class IntegerWork1 {
         a = scanner.nextInt() ;
         System.out.println("Введите 2 число");
         b = scanner.nextInt() ;
-        a -= a;
+        System.out.println("a + b =" + ( a + b ));
+        System.out.println("a - b =" + ( a - b ));
+        System.out.println("a * b =" + ( a * b ));
+        System.out.println("a / b =" + ( a / b ));
+        System.out.println("a % b =" + ( a % b ));
         a++;
-        b -= b;
-        b--;
-        System.out.println(a +" " + b);
-
-        a = a = 0x011011;
-        b = b = 0xFA50;
         System.out.println(a);
+        b--;
+        System.out.println(b);
+        a += 0b011011;
+        System.out.println(a);
+        b += 0xFA50;
         System.out.println(b);
     }
 
