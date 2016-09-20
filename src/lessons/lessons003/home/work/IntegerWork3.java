@@ -8,10 +8,12 @@ package lessons.lessons003.home.work;
 //**** Внимание : величины имеют разные системы измерения(их нужно превести друг к другу)
 //**** Могут получаться большие числа
 
+import java.util.Scanner;
+
 public class IntegerWork3 {
 
     public static void main(String[] args) {
-
+        Scanner scanner = new Scanner(System.in);
     }
 
 }
