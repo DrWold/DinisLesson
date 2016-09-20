@@ -13,12 +13,12 @@ public class IntegerWork2 {
         int speed;
         int time;
         int path;
-        System.out.println("Введите скорость");
+        System.out.println("Введите скорость KM/Ч");
         speed = scanner.nextInt();
         System.out.println("Введите время");
         time = scanner.nextInt();
         path = speed * time;
-        System.err.println("пройденный путь " + path + "КМ");
+        System.err.println("пройденный путь " + path + " КМ");
 
     }
 

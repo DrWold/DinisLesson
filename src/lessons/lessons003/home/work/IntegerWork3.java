@@ -14,6 +14,11 @@ public class IntegerWork3 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.println("Киломентры в секунду");
+        long speed ;
+        System.out.println("Пройденные дни");
+        long day;
+
     }
 
 }
