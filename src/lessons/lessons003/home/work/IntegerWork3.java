@@ -14,10 +14,17 @@ public class IntegerWork3 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Киломентры в секунду");
-        long speed ;
-        System.out.println("Пройденные дни");
-        long day;
+        int SECONDS_TO_DAY = 60 * 60 * 24;
+        long speed ; // KM/сек
+        long day; //время пройденное в днях
+        long path; // Сколько метров преодалел корабль
+        System.out.println("Введите скорость коробля КМ/сек");
+        speed = scanner.nextLong();
+        System.out.println("Введите пройденный путь в днях");
+        day = scanner.nextLong();
+        path = speed * day * SECONDS_TO_DAY ; // путь в км
+        path *= 1000; // путь в метрах
+        System.out.println("Метры пройденные короблем = " + path);
 
     }
 

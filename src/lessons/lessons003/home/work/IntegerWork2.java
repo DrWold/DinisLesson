@@ -10,12 +10,12 @@ public class IntegerWork2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int speed;
-        int time;
-        int path;
+        int speed; //KM/Ч
+        int time; // Часов в пути
+        int path; // пройденное расстояние
         System.out.println("Введите скорость KM/Ч");
         speed = scanner.nextInt();
-        System.out.println("Введите время");
+        System.out.println("Введите время в пути в час");
         time = scanner.nextInt();
         path = speed * time;
         System.err.println("пройденный путь " + path + " КМ");
