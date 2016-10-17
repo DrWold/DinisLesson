@@ -8,3 +8,4 @@ package lessons.lessons004.home.work;
 //Напечать ему силу гравитации между 2 этими телами, сила измеряется в ньютонах
 public class DoubleHW3 {
 }
+.
