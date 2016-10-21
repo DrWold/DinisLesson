@@ -13,15 +13,15 @@ import java.util.Scanner;
 public class DoubleHW2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double rost ;//рост м
-        double  mass ;//масса кг
+        double rost;//рост м
+        double mass;//масса кг
         double index; // индекс массы тела
 
         System.out.println("Введите Рост в метрах");
         rost = scanner.nextDouble();
         System.out.println("Введите Вес в кг");
         mass = scanner.nextDouble();
-         index = mass / (rost * rost);
+        index = mass / (rost * rost);
 
         System.out.println("Индекс массы тела = " + index);
 

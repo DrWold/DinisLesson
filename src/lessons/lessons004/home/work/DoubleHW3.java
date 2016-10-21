@@ -10,11 +10,14 @@ import java.util.Scanner;
 //Напечать ему силу гравитации между 2 этими телами, сила измеряется в ньютонах
 public class DoubleHW3 {
     public static void main(String[] args) {
-    double m1;
-    double m2;
-    double r; // расстояние (запись пользователя)
-    double r2;// расстояние во 2 степени
-    double dfs;// Дополнительная запись
+
+        double G = 6.7e-11; // 6.67 * 10^-11
+
+        double m1;
+        double m2;
+        double r; // расстояние (запись пользователя)
+        double r2;// расстояние во 2 степени
+        double gravity;// Дополнительная запись
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите 1 массу тела в кг");
         m1 = scanner.nextDouble();
@@ -23,11 +26,11 @@ public class DoubleHW3 {
         System.out.println("Введите расстояния в м");
         r = scanner.nextDouble();
 
-        r2 = r *2;
+        r2 = r * r;
 
-        dfs = m1 * m2 /r2;
+        gravity =  G * (m1 * m2 / r2);
 
-        System.out.println(dfs);
+        System.out.println("Сила гравитации : " + gravity + " Н.");
 
 
     }
