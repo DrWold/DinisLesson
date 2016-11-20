@@ -15,33 +15,24 @@ public class IfWork1 {
     public static void main(String[] args) {
         int numberOne;
         int numberDuo;
-        int resultTest; // память для записи выбора опции
-        int numberMin; // Для вычесление 2 опцией (вычесление тернарным оператором)
-        int numberMax; // Для вычесление 2 опцией (вычесление тернарным оператором)
+        int numberMax;
+        int numberMin;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите 1 число");
         numberOne = scanner.nextInt();
         System.out.println("Введите 2 число");
         numberDuo = scanner.nextInt();
-        System.out.println("Выберите опцию 1 или 2 если желайте выйти Введите exit либа просто нажмите enter");
-        resultTest = scanner.nextInt();
 
-        if(resultTest == 1) {
-            resultTest = numberOne;
+        if(numberOne > numberDuo) {
             System.out.println("число " + numberOne + " больше чем число " + numberDuo );
-        }else if (resultTest == 2){
-            numberMax = (numberOne > numberDuo ? numberOne : numberDuo);
-            numberMin = (numberOne < numberDuo ? numberOne : numberDuo);
-            System.out.println(numberMax + "больше");
-            System.out.println(numberMin + "меньше");
-
-
-
-
         }else {
-            System.out.println("благодарим за использованием программы");
+            System.out.println("число " + numberDuo + " больше чем число " + numberOne );
         }
 
+        numberMax = (numberOne > numberDuo ? numberOne : numberDuo);
+        numberMin = (numberOne < numberDuo ? numberOne : numberDuo);
+        System.out.println(numberMax + " больше ");
+        System.out.println(numberMin + " меньше ");
 
 
 
