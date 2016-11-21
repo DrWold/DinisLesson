@@ -6,4 +6,8 @@ package lessons.lessons006.home.work;
 // После расчета индекса массы тела, написать пользователю его диагноз, таблица в википедиа
 // то есть если например индекс массы тела 27, то написать предожирение и.т.д
 public class IfWork3 {
+    public static void main(String[] args) {
+        double index;
+        if (index = )
+    }
 }

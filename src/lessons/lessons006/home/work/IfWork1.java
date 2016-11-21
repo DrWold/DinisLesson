@@ -17,6 +17,7 @@ public class IfWork1 {
         int numberDuo;
         int numberMax;
         int numberMin;
+        int numberSmooth;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите 1 число");
         numberOne = scanner.nextInt();
@@ -25,14 +26,18 @@ public class IfWork1 {
 
         if(numberOne > numberDuo) {
             System.out.println("число " + numberOne + " больше чем число " + numberDuo );
+        }else if (numberOne == numberDuo){
+            System.out.println( " вы ввели 1 и тоже число " + numberOne );
         }else {
-            System.out.println("число " + numberDuo + " больше чем число " + numberOne );
+            System.out.println("число " + numberDuo + " больше чем число " + numberOne);
         }
 
         numberMax = (numberOne > numberDuo ? numberOne : numberDuo);
+
         numberMin = (numberOne < numberDuo ? numberOne : numberDuo);
         System.out.println(numberMax + " больше ");
         System.out.println(numberMin + " меньше ");
+        System.out.println(numberSmooth  + " вы ввели 1 и тоже число ");
 
 
 
