@@ -18,18 +18,16 @@ public class IfWork4 {
         number2 = scanner.nextInt();
         if (operation == '+') {
             result = number1 + number2;
-            System.out.println(result);
         }else if (operation == '-') {
             result = number1 - number2;
-            System.out.println(result);
         }else if (operation == '*') {
             result = number1 * number2;
-            System.out.println(result);
         }else if (operation == '/') {
             result = number1 / number2;
-            System.out.println(result);
         }else {
             System.out.println("Вы ввели некоректный символ");
+            return;
         }
+        System.out.println(result);
     }
 }
