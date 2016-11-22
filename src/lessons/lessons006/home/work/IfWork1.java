@@ -17,7 +17,7 @@ public class IfWork1 {
         int numberDuo;
         int numberMax;
         int numberMin;
-        int numberSmooth;
+        int numberSmooth = 4;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите 1 число");
         numberOne = scanner.nextInt();
