@@ -16,6 +16,7 @@ public class IfWork4 {
         number1 = scanner.nextInt();
         operation = scanner.next().charAt(0);
         number2 = scanner.nextInt();
+
         if (operation == '+') {
             result = number1 + number2;
         }else if (operation == '-') {
@@ -28,6 +29,7 @@ public class IfWork4 {
             System.out.println("Вы ввели некоректный символ");
             return;
         }
+
         System.out.println(result);
     }
 }
