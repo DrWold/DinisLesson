@@ -23,7 +23,7 @@ public class IfWork3 {
 
         index = mass / (rost * rost);
 
-        if (index <= 16 ){
+        if (index <= 16){
             System.out.println("Выраженный дефицит массы тела");
         } else if (index <= 18.5){
             System.out.println("Недостаточная (дефицит) масса тела");
