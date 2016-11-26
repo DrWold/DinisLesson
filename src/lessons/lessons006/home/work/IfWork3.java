@@ -9,7 +9,30 @@ import java.util.Scanner;
 // то есть если например индекс массы тела 27, то написать предожирение и.т.д
 public class IfWork3 {
     public static void main(String[] args) {
-        double index = 0;
-        Scanner scanner
+        Scanner scanner = new Scanner(System.in);
+        double rost;//рост м
+        double mass;//масса кг
+        double index; // индекс массы тела
+
+        System.out.println("Введите Рост в метрах");
+        rost = scanner.nextDouble();
+        System.out.println("Введите Вес в кг");
+        mass = scanner.nextDouble();
+        index = mass / (rost * rost);
+        if (index <= 16 ) {
+            System.out.println("Выраженный дефицит массы тела");
+        }else if (index <= 18.5) {
+            System.out.println("Недостаточная (дефицит) масса тела");
+        }else if (index <=24.99) {
+            System.out.println("Норма");
+        }else  if (index >= 25 && index <=30){
+
+        }else if (index <= 35) {
+            System.out.println("Ожирение первой степени");
+        }else if (index <= 40){
+            System.out.println(	"Ожирение второй степени");
+        }else {
+            System.out.println("Ожирение третьей степени (морбидное)");
+        }
     }
 }
