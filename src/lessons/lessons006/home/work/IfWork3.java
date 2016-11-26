@@ -23,19 +23,19 @@ public class IfWork3 {
 
         index = mass / (rost * rost);
 
-        if (index <= 16 ) {
+        if (index <= 16 ){
             System.out.println("Выраженный дефицит массы тела");
-        } else if (index <= 18.5) {
+        } else if (index <= 18.5){
             System.out.println("Недостаточная (дефицит) масса тела");
-        } else if (index < 25) {
+        } else if (index < 25){
             System.out.println("Норма");
         } else if (index <= 30){
             System.out.println("Предожирение");
-        } else if (index <= 35) {
+        } else if (index <= 35){
             System.out.println("Ожирение первой степени");
         } else if (index <= 40){
             System.out.println(	"Ожирение второй степени");
-        } else {
+        } else{
             System.out.println("Ожирение третьей степени (морбидное)");
         }
     }

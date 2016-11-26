@@ -20,10 +20,12 @@ public class SwitchWork4 {
 
         int id; //Введенный айди стиха
 
-        System.out.println("Выберите стих");
-        System.out.println("1 Михаил Лермонтов 2 Сергей Есенин  3 Иоганн Вольфганг фон Гёте");
-        id = scanner.nextInt();
+        System.out.println("Выберите номер стиха:");
+        System.out.println("1. Михаил Лермонтов. На севере диком стоит одиноко");
+        System.out.println("2. Сергей Есенин. Песнь о собаке");
+        System.out.println("3. Иоганн Вольфганг фон Гёте. Фауст");
 
+        id = scanner.nextInt();
 
         switch (id) {
             case 1:
@@ -109,7 +111,7 @@ public class SwitchWork4 {
                         "Поэт, сверши сегодня это диво.");
                 break;
             default:
-                System.out.println("Вы ввели не правильный ид");
+                System.out.println("Вы ввели не правильный номер");
         }
     }
 }
