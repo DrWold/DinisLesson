@@ -11,14 +11,14 @@ package lessons.lessons007.home.work;
 // Сделать 2 реализации, через for и через while
 public class LoopHW1 {
     public static void main(String[] args) {
-       int i = 60;
-        while (i < 300){
-            i+=5;
+        int i = 60;
+        while (i <= 300) {
             System.out.println(i);
+            i += 5;
         }
-       // for (int i=60; i < 300; i+=5) {
-         //   System.out.println(i);
-
-        //}
+//        for (int i = 60; i <= 300; i += 5) {
+//            System.out.println(i);
+//
+//        }
     }
 }
