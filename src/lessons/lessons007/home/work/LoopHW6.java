@@ -19,24 +19,41 @@ public class LoopHW6 {
 
         int balance = 1000;
         char answer;
+
+        System.out.println("Здраствуйте Добро пожаловать в казино ");
+        System.out.println("ВНИМАНИЕ ИГРА СТОИТ 5 МАНЕТ ");
+
         do {
 
-            int kazino;;
-            System.out.println("Здраствуйте чтоб сыграть в казино нажмите Y|N");
-            System.out.println("ВНИМАНИЕ ИГРА СТОИТ 5 МАНЕТ У ВАС : " + balance);
-            answer = scanner.next().charAt(0);
-            balance -= 5;
-            kazino = random.nextInt(900) + 100 ;
+            System.out.println("у вас " + balance + " начать игру нажмите Y|N");
 
-            if (kazino == 111 || kazino == 222 || kazino == 333 || kazino == 444 || kazino == 555 || kazino == 666 || kazino == 777 || kazino == 888 || kazino == 999 ){
-                System.out.println("вы выйграли Джекпот" + kazino);
+            answer = scanner.next().charAt(0);
+            if (answer != 'Y' && answer != 'y') {
+                return;
+            }
+
+            int randomNumber = random.nextInt(900) + 100;
+
+            balance -= 5;
+
+            System.out.println(randomNumber);
+
+            if (randomNumber == 111 || randomNumber == 222 || randomNumber == 333 || randomNumber == 444 || randomNumber == 555 || randomNumber == 666 || randomNumber == 888 || randomNumber == 999) {
+                System.out.println("вы выйграли Джекпот" + randomNumber);
                 balance += 100;
+            } else if (randomNumber == 777) {
+                balance += 700;
+                System.out.println(randomNumber);
+            } else if (randomNumber % 10 == 5) {
+                System.out.println("Вы выйграли 20 манет ");
+                balance += 10;
+            } else {
+                System.out.println("вы проиграли ");
+
             }
 
 
-
-        } while (answer == 'Y' || answer == 'y');
-
+        } while (true);
 
 
     }
