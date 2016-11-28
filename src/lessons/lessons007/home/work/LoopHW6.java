@@ -20,36 +20,41 @@ public class LoopHW6 {
         int balance = 1000;
         char answer;
 
-        System.out.println("Здраствуйте Добро пожаловать в казино ");
-        System.out.println("ВНИМАНИЕ ИГРА СТОИТ 5 МАНЕТ ");
+        System.out.println("**************** Казино-Автомат ****************");
+        System.out.println("Цена одной игры 5 рублей!");
 
         do {
 
-            System.out.println("у вас " + balance + " начать игру нажмите Y|N");
+            System.out.println("Ваш баланс: " + balance);
+            System.out.println("Начать игру нажмите (Y/N)");
 
             answer = scanner.next().charAt(0);
             if (answer != 'Y' && answer != 'y') {
                 return;
             }
 
-            int randomNumber = random.nextInt(900) + 100;
+            if (balance < 5) {
+                System.out.println("Вы банкрот!");
+                return;
+            }
 
-            balance -= 5;
+            balance -= 5; // цена одной игры
 
-            System.out.println(randomNumber);
+            // (0...899) + 100 = (100...999)
+            int randomNumber = random.nextInt(900) + 100; // 100...999
+            System.out.println("Сгенерированное число : " + randomNumber);
 
             if (randomNumber == 111 || randomNumber == 222 || randomNumber == 333 || randomNumber == 444 || randomNumber == 555 || randomNumber == 666 || randomNumber == 888 || randomNumber == 999) {
-                System.out.println("вы выйграли Джекпот" + randomNumber);
+                System.out.println("Вы выйграли крупную сумму");
                 balance += 100;
             } else if (randomNumber == 777) {
+                System.out.println("Вы сорвали джекпот");
                 balance += 700;
-                System.out.println(randomNumber);
             } else if (randomNumber % 10 == 5) {
-                System.out.println("Вы выйграли 20 манет ");
-                balance += 10;
+                System.out.println("Вы выйграли 20 манет");
+                balance += 20;
             } else {
-                System.out.println("вы проиграли ");
-
+                System.out.println("Вы проиграли");
             }
 
 
