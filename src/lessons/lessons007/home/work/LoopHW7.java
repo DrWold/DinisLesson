@@ -51,7 +51,14 @@ public class LoopHW7 {
             return;
         }
         do {
-
+            if (demonHp < 0){
+                System.out.println("Вы выйграли" + heroHp + "hp");
+                return;
+            }
+            if (heroHp < 0 ){
+                System.out.println("Вы проиграли " + heroHp + "hp");
+                return;
+            }
             System.out.println("");
             System.out.println("Выберите действие ");
             System.out.println("1.Узнать свое здоровье");
@@ -60,12 +67,12 @@ public class LoopHW7 {
             System.out.println("4. Ударить демона ");
             System.out.println("5. Сделать кувырок ");
             System.out.println("6. Поставить щит ");
-            System.out.println("7.Предложить выпить (вероятность убить мгновенно демона));");
-            System.out.println("8. Убежать (выход)");
+            System.out.println("7. Убежать (выход)");
             System.out.println("");
             answer2 = scanner.nextInt();
 
           switch (answer2){
+
               case 1:
                   System.out.println("У вас " + heroHp + "hp");
                   break;
@@ -73,6 +80,20 @@ public class LoopHW7 {
                   System.out.println("У демона " + demonHp + "hp");
                   break;
               case 3:
+                  if (heroHp == 100){
+                      System.out.println("у вас полное здоровье ");
+                      continue;
+                  }
+                    if (healthPotion == 0){
+                        System.out.println("нет зелей");
+                    }
+                  System.out.println("Вы восстановили 50 hp");
+                    healthPotion--;
+                  System.out.println("У вас осталось зелей " + healthPotion + " из 3 ");
+                  heroHp += 50;
+                  if (heroHp > 100){
+                      heroHp = 100;
+                  }
                   break;
               case 4:
                   damageHero = random.nextInt(40) + 10 ;
@@ -91,18 +112,22 @@ public class LoopHW7 {
                   }else{
                       System.out.println("Вы не смогли увернуться");
                       damagedemon = random.nextInt(30) + 10;
-                      heroHp -= demonHp;
+                      heroHp -= damagedemon;
                       System.out.println("Демон нанес вам  " + damagedemon + "hp" );
                   }
                   break;
               case 6:
                   System.out.println("Вы поставили щит урон по вам снижен но и бьете вы тоже слабо");
-                  damageHero = random.nextInt(5) + 20;
+                  damageHero = random.nextInt(6) + 10;
                   damagedemon = random.nextInt(3) + 10 ;
-                  damageHero -= damageHero;
+                  demonHp -= damageHero;
                   System.out.println("Вы ударили демона на " + damageHero + "hp");
                   heroHp -= damagedemon;
                   System.out.println("Демон ударил вас на " + damagedemon + "hp");
+                  break;
+              case 7:
+                  System.out.println("Ты трус");
+                  return;
           }
 
         }while (true);
