@@ -18,5 +18,23 @@ package lessons.lessons007.home.work;
 // Если игрок выбирает кувырок, он с вероятностью 50% может укланиться от удара, а может его получить
 // Если игрок умер, написать что он проиграл, если убил демона написать что победил после, предложить ему сыграть еще раз(Y/N)
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class LoopHW7 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        int demonHp = 500;
+        int heroHp = 100;
+        char answer;
+
+
+        System.out.println("|----------------------------------------------------------|");
+        System.out.println("|                    Герой против Демона                   |");
+        System.out.println("|--------------------------------------------------------- |");
+        System.out.println("Чтоб начать игру нажмите Y/N");
+
+    }
 }
