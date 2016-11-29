@@ -32,11 +32,10 @@ public class LoopHW7 {
         int answer2;// ответ действия
 
         ////////////////////////////////////////////////////
-        int damageHero ;
-        int damagedemon   ;
+        int damageHero;
+        int damagedemon;
         int healthPotion = 3;
         int dodge;
-
 
 
         ////////////////////////////////////////////////////
@@ -47,15 +46,15 @@ public class LoopHW7 {
         System.out.println("|--------------------------------------------------------- |");
         System.out.println("Чтоб начать игру нажмите Y/N");
         answer = scanner.next().charAt(0);
-        if (answer != 'Y' && answer != 'y' ){
+        if (answer != 'Y' && answer != 'y') {
             return;
         }
         do {
-            if (demonHp < 0){
+            if (demonHp < 0) {
                 System.out.println("Вы выйграли" + heroHp + "hp");
                 return;
             }
-            if (heroHp < 0 ){
+            if (heroHp < 0) {
                 System.out.println("Вы проиграли " + heroHp + "hp");
                 return;
             }
@@ -71,65 +70,65 @@ public class LoopHW7 {
             System.out.println("");
             answer2 = scanner.nextInt();
 
-          switch (answer2){
+            switch (answer2) {
 
-              case 1:
-                  System.out.println("У вас " + heroHp + "hp");
-                  break;
-              case 2:
-                  System.out.println("У демона " + demonHp + "hp");
-                  break;
-              case 3:
-                  if (heroHp == 100){
-                      System.out.println("у вас полное здоровье ");
-                      continue;
-                  }
-                    if (healthPotion == 0){
+                case 1:
+                    System.out.println("У вас " + heroHp + "hp");
+                    break;
+                case 2:
+                    System.out.println("У демона " + demonHp + "hp");
+                    break;
+                case 3:
+                    if (heroHp == 100) {
+                        System.out.println("у вас полное здоровье ");
+                        continue;
+                    }
+                    if (healthPotion == 0) {
                         System.out.println("нет зелей");
                     }
-                  System.out.println("Вы восстановили 50 hp");
+                    System.out.println("Вы восстановили 50 hp");
                     healthPotion--;
-                  System.out.println("У вас осталось зелей " + healthPotion + " из 3 ");
-                  heroHp += 50;
-                  if (heroHp > 100){
-                      heroHp = 100;
-                  }
-                  break;
-              case 4:
-                  damageHero = random.nextInt(40) + 10 ;
-                  damagedemon = random.nextInt(30) + 10;
-                  System.out.println("Вы ударили демона на " + damageHero  );
-                  demonHp -= damageHero;
-                  System.out.println("и получили в ответ " + damagedemon);
-                  heroHp -= damagedemon;
-                  break;
-              case 5:
-                dodge = random.nextInt(5) + 50;
-                  System.err.println(dodge);
-                  if (dodge == 50){
-                      System.out.println("Вы увернулись");
-                      continue;
-                  }else{
-                      System.out.println("Вы не смогли увернуться");
-                      damagedemon = random.nextInt(30) + 10;
-                      heroHp -= damagedemon;
-                      System.out.println("Демон нанес вам  " + damagedemon + "hp" );
-                  }
-                  break;
-              case 6:
-                  System.out.println("Вы поставили щит урон по вам снижен но и бьете вы тоже слабо");
-                  damageHero = random.nextInt(6) + 10;
-                  damagedemon = random.nextInt(3) + 10 ;
-                  demonHp -= damageHero;
-                  System.out.println("Вы ударили демона на " + damageHero + "hp");
-                  heroHp -= damagedemon;
-                  System.out.println("Демон ударил вас на " + damagedemon + "hp");
-                  break;
-              case 7:
-                  System.out.println("Ты трус");
-                  return;
-          }
+                    System.out.println("У вас осталось зелей " + healthPotion + " из 3 ");
+                    heroHp += 50;
+                    if (heroHp > 100) {
+                        heroHp = 100;
+                    }
+                    break;
+                case 4:
+                    damageHero = random.nextInt(40) + 10;
+                    damagedemon = random.nextInt(30) + 10;
+                    System.out.println("Вы ударили демона на " + damageHero);
+                    demonHp -= damageHero;
+                    System.out.println("и получили в ответ " + damagedemon);
+                    heroHp -= damagedemon;
+                    break;
+                case 5:
+                    dodge = random.nextInt(5) + 50;
+                    System.err.println(dodge);
+                    if (dodge == 50) {
+                        System.out.println("Вы увернулись");
+                        continue;
+                    } else {
+                        System.out.println("Вы не смогли увернуться");
+                        damagedemon = random.nextInt(30) + 10;
+                        heroHp -= damagedemon;
+                        System.out.println("Демон нанес вам  " + damagedemon + "hp");
+                    }
+                    break;
+                case 6:
+                    System.out.println("Вы поставили щит урон по вам снижен но и бьете вы тоже слабо");
+                    damageHero = random.nextInt(6) + 10;
+                    damagedemon = random.nextInt(3) + 10;
+                    demonHp -= damageHero;
+                    System.out.println("Вы ударили демона на " + damageHero + "hp");
+                    heroHp -= damagedemon;
+                    System.out.println("Демон ударил вас на " + damagedemon + "hp");
+                    break;
+                case 7:
+                    System.out.println("Ты трус");
+                    return;
+            }
 
-        }while (true);
+        } while (true);
     }
 }
