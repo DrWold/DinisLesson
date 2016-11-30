@@ -120,10 +120,10 @@ public class LoopHW7 {
                     System.out.println("Вы поставили щит урон по вам снижен но и бьете вы тоже слабо");
                     damageHero = random.nextInt(40) + 40;
                     damagedemon = random.nextInt(20) + 10 ;
-                    damageHero /= 7;
+                    damageHero *= 0.3;
                     demonHp -= damageHero ;
                     System.out.println("Вы ударили демона на " + damageHero + "hp");
-                    damagedemon /= 3;
+                    damagedemon *= 0.3;
                     heroHp -= damagedemon ;
                     System.out.println("Демон ударил вас на " + damagedemon + "hp");
                     break;
