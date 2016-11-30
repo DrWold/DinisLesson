@@ -85,6 +85,7 @@ public class LoopHW7 {
                     }
                     if (healthPotion == 0) {
                         System.out.println("нет зелей");
+                        continue;
                     }
                     System.out.println("Вы восстановили 50 hp");
                     healthPotion--;
