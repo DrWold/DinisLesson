@@ -118,7 +118,7 @@ public class LoopHW7 {
                     break;
                 case 6:
                     System.out.println("Вы поставили щит урон по вам снижен но и бьете вы тоже слабо");
-                    damageHero = random.nextInt(16) + 40;
+                    damageHero = random.nextInt(16) + 20;
                     damagedemon = random.nextInt(10) + 11;
                     demonHp -= damageHero;
                     System.out.println("Вы ударили демона на " + damageHero + "hp");
