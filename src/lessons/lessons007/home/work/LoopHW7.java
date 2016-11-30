@@ -96,22 +96,22 @@ public class LoopHW7 {
                     }
                     break;
                 case 4:
-                    damageHero = random.nextInt(40) + 10;
-                    damagedemon = random.nextInt(30) + 10;
+                    damageHero = random.nextInt(40) + 50;
+                    damagedemon = random.nextInt(20) + 10;
                     System.out.println("Вы ударили демона на " + damageHero);
                     demonHp -= damageHero;
                     System.out.println("и получили в ответ " + damagedemon);
                     heroHp -= damagedemon;
                     break;
                 case 5:
-                    dodge = random.nextInt(5) + 50;
+                    dodge = random.nextInt(2);
                     System.err.println(dodge);
-                    if (dodge == 50) {
+                    if (dodge == 0) {
                         System.out.println("Вы увернулись");
                         continue;
                     } else {
                         System.out.println("Вы не смогли увернуться");
-                        damagedemon = random.nextInt(30) + 10;
+                        damagedemon = random.nextInt(20) + 10;
                         heroHp -= damagedemon;
                         System.out.println("Демон нанес вам  " + damagedemon + "hp");
                     }
@@ -119,7 +119,7 @@ public class LoopHW7 {
                 case 6:
                     System.out.println("Вы поставили щит урон по вам снижен но и бьете вы тоже слабо");
                     damageHero = random.nextInt(6) + 10;
-                    damagedemon = random.nextInt(3) + 10;
+                    damagedemon = random.nextInt(5) + 5;
                     demonHp -= damageHero;
                     System.out.println("Вы ударили демона на " + damageHero + "hp");
                     heroHp -= damagedemon;
