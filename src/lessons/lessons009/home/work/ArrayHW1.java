@@ -23,21 +23,43 @@ public class ArrayHW1 {
             return;
 
         }
-        int [] number = new int[n];
+        int[] number = new int[n];
 
-        for (int i = 0; i < number.length / 2; i++) {
-            System.out.println("Введите положительное " + (i+1) + " число");
+        for (int i = 0; i < number.length; i++) {
+            System.out.println("Введите " + (i + 1) + " число");
             number[i] = scanner.nextInt();
 
 
+        }
+        int sumPlus = 0;
+        int sumMinus = 0;
+        int min = number[0];
+        int max = number[0];
+
+        for (int elements : number) {
+            if (elements > 0) {
+                System.out.println("число " + elements + " положительное");
+                System.out.println();
+                sumPlus += elements;
+            } else {
+                System.out.println("число" + elements + " отрицательное ");
+                System.out.println();
+                sumMinus += elements;
+            }
+            if (elements < max) {
+                max = elements;
+            }
+            if (elements > min) {
+                min = elements;
+
+            }
 
         }
-        for (int elements : number) {
-            System.out.println(elements);
-        }
-            int min = number[0];
-            int max = number [0];
-            int sum = 0;
+
+
+        System.out.println("Сумма отрицательных чисел " + sumMinus);
+        System.out.println("Сумма положительных чисел " + sumPlus);
+        System.out.println("Максимальное отрицательно число " + max);
 
     }
 }
