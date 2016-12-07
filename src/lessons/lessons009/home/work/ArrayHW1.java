@@ -34,6 +34,9 @@ public class ArrayHW1 {
         int sumPlus = 0;
         int sumMinus = 0;
         int min = number[0];
+        for (int i = 0; i < number.length ; i++) {
+            min = number[i];
+        }
         int max = number[0];
 
         for (int elements : number) {
@@ -49,10 +52,8 @@ public class ArrayHW1 {
             if (elements < max) {
                 max = elements;
             }
-            if (elements > min) {
-                min = elements;
 
-            }
+
 
         }
 
@@ -60,6 +61,7 @@ public class ArrayHW1 {
         System.out.println("Сумма отрицательных чисел " + sumMinus);
         System.out.println("Сумма положительных чисел " + sumPlus);
         System.out.println("Максимальное отрицательно число " + max);
+        System.out.println("Миниальное положителное число "  + min);
 
     }
 }
