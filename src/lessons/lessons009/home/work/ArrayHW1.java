@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class ArrayHW1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int n = 0;
+        int n ;
 
         System.out.println("Введите количество чисел которые желайте обработать ");
         n = scanner.nextInt();
@@ -33,13 +33,16 @@ public class ArrayHW1 {
         }
         int sumPlus = 0;
         int sumMinus = 0;
-        int min = number[0];
-        for (int i = 0; i < number.length ; i++) {
-            min = number[i];
-        }
-        int max = number[0];
+        int min = 0;
+        int max = 0;
 
         for (int elements : number) {
+            if (elements > 0 && min == 0){
+                min = elements;
+            }
+            if (elements < 0 && max == 0){
+                max = elements;
+            }
             if (elements > 0) {
                 System.out.println("число " + elements + " положительное");
                 System.out.println();
@@ -49,8 +52,11 @@ public class ArrayHW1 {
                 System.out.println();
                 sumMinus += elements;
             }
-            if (elements < max) {
+            if (elements < 0 && elements > max) {
                 max = elements;
+            }
+            if (elements > 0 && elements < min) {
+                min = elements;
             }
 
 
