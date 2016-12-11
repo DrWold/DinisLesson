@@ -7,63 +7,138 @@ import java.util.Scanner;
 //        Написать название месяца с самыми высокими продажами
 //        Вывести название месяцев за которые сумма продаж больше чем 10_000 руб.
 public class ArrayHW3 {
+
+   public static void printMonth(int index){
+       switch (index) {
+           case 1:
+               System.out.println("Январь");
+               break;
+           case 2:
+               System.out.println("Февраль");
+               break;
+           case 3:
+               System.out.println("Март");
+               break;
+           case 4:
+               System.out.println("Апрель");
+               break;
+           case 5:
+               System.out.println("Май");
+               break;
+           case 6:
+               System.out.println("Июнь");
+               break;
+           case 7:
+               System.out.println("Июль");
+               break;
+           case 8:
+               System.out.println("Август");
+               break;
+           case 9:
+               System.out.println("Сентябрь");
+               break;
+           case 10:
+               System.out.println("Октябрь");
+               break;
+           case 11:
+               System.out.println("Ноябрь");
+               break;
+           case 12:
+               System.out.println("Декабрь");
+               break;
+
+       }
+
+   }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int[] mothMoney = new int[12];
-        int month;
-        for (int i = 0; i < mothMoney.length; i++) {
-            month = +i;
+        int[] monthMoney = new int[12];
+
+        for (int month = 0; month < monthMoney.length; month++) {
+
             switch (month) {
                 case 0:
                     System.out.println("Введите прибыль за январь");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
                 case 1:
                     System.out.println("Введите прибыль за февраль");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
                 case 2:
                     System.out.println("Введите прибыль за март");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
                 case 3:
                     System.out.println("Введите прибыль за апрель");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
                 case 4:
                     System.out.println("Введите прибыль за май");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
                 case 5:
                     System.out.println("Введите прибыль за июнь");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
                 case 6:
                     System.out.println("Введите прибыль за июль");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
                 case 7:
                     System.out.println("Введите прибыль за август");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
                 case 8:
                     System.out.println("Введите прибыль за сентябрь");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
                 case 9:
                     System.out.println("Введите прибыль за октябрь");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
                 case 10:
                     System.out.println("Введите прибыль за ноябрь");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
                 case 11:
                     System.out.println("Введите прибыль за декабрь");
-                    mothMoney[i] = scanner.nextInt();
+                    monthMoney[month] = scanner.nextInt();
                     break;
 
             }
         }
+        int min = monthMoney[0];
+        int max = monthMoney[0]; // 5 6 4 8 3
+        int indexMin = 0;
+        int indexMax = 0;
+        for (int i = 0; i <monthMoney.length ; i++) {
+            if (min > monthMoney[i]) {
+                min = monthMoney[i];
+                indexMin = i;
+            }
+
+            if (max < monthMoney[i]){
+                max = monthMoney[i];
+                indexMax = i;
+            }
+            if (monthMoney[i] >= 10_000){
+                System.out.println("За этот месяц прибыль больше 10_000 :");
+                printMonth(i+1);
+
+
+            }
+
+        }
+
+
+        System.out.println("Минимальная прибыль : " );
+        printMonth(indexMin+1);
+        System.out.println("Максимальная прибыль : ");
+        printMonth(indexMax+1);
+
+
+
     }
 }
