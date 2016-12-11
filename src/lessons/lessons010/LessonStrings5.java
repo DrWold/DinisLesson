@@ -9,6 +9,7 @@ public class LessonStrings5 {
         for(String arg : args) {
             if (arg.equals("Dev")) {
                 isDev = true;
+                break;
             }
         }
 
