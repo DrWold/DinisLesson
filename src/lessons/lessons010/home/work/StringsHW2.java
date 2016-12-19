@@ -17,7 +17,7 @@ public class StringsHW2 {
         for (String word : words) {
             for (String vords :disros )
             if (word.equals(vords)) {
-                word = "****";
+                word = "****";result
             }
             result +=  word + ' ';
         }
