@@ -11,13 +11,18 @@ public class StringsHW2 {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите текст");
         String text = scanner.nextLine();
-        String[] disros = new String[] {"fuck", "sick", "bitch"};
+        String[] dirtyWords = new String[] {"fuck", "sick", "bitch"};
         String[] words = text.split(" ");
         String result = "";
         for (String word : words) {
-            for (String vords :disros )
-            if (word.equals(vords)) {
-                word = "****";
+            for (String dirtyWord :dirtyWords ) {
+                if (word.equals(dirtyWord)) {
+                    char [] stars = new char[word.length() -2];
+                    Arrays.fill(stars, '*');
+                    String tempStr = new String(stars);
+                    word = word.charAt(0) + tempStr + word.charAt(word.length() - 1);
+                    break;
+                }
             }
             result +=  word + ' ';
         }
