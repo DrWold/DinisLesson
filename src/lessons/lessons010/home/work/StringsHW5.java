@@ -3,10 +3,8 @@ package lessons.lessons010.home.work;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/**
- * Created by Gordon on 21.12.2016.
- */
-public class StringsHW8 {
+
+public class StringsHW5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите текст");
