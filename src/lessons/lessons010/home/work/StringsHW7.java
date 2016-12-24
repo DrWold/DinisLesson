@@ -53,8 +53,9 @@ public class StringsHW7 {
                 System.out.println("Вы проиграли " + heroHp + "hp");
                 return;
             }
+
             System.out.println("");
-        System.out.println("Введите команду ");
+            System.out.println("Введите команду ");
             System.out.println("герой : Узнать свое здоровье");
             System.out.println("демон : Узнать здоровье демона");
             System.out.println("зелье : Выпить зелье ");
@@ -62,7 +63,8 @@ public class StringsHW7 {
             System.out.println("кувырок : Сделать кувырок ");
             System.out.println("щит : Поставить щит ");
             System.out.println("убежать : (выход)");
-            System.out.println("");
+            System.out.println();
+
             answer2 = scanner.next();
             String register = answer2.toLowerCase();
 
