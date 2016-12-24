@@ -17,7 +17,7 @@ public class StringsHW7 {
 
         ////////////////////////////////////////////////////
         int damageHero;
-        int damagedemon;
+        int damageDemon;
         int healthPotion = 3;
         int dodge;
 
@@ -99,11 +99,11 @@ public class StringsHW7 {
                     break;
                 case "удар":
                     damageHero = random.nextInt(40) + 40;
-                    damagedemon = random.nextInt(20) + 10;
+                    damageDemon = random.nextInt(20) + 10;
                     System.out.println("Вы ударили демона на " + damageHero);
                     demonHp -= damageHero;
-                    System.out.println("и получили в ответ " + damagedemon);
-                    heroHp -= damagedemon;
+                    System.out.println("и получили в ответ " + damageDemon);
+                    heroHp -= damageDemon;
                     break;
                 case "кувырок":
                     dodge = random.nextInt(2);
@@ -113,21 +113,21 @@ public class StringsHW7 {
                         continue;
                     } else {
                         System.out.println("Вы не смогли увернуться");
-                        damagedemon = random.nextInt(20) + 10;
-                        heroHp -= damagedemon;
-                        System.out.println("Демон нанес вам  " + damagedemon + "hp");
+                        damageDemon = random.nextInt(20) + 10;
+                        heroHp -= damageDemon;
+                        System.out.println("Демон нанес вам  " + damageDemon + "hp");
                     }
                     break;
                 case "щит":
                     System.out.println("Вы поставили щит урон по вам снижен но и бьете вы тоже слабо");
                     damageHero = random.nextInt(40) + 40;
-                    damagedemon = random.nextInt(20) + 10 ;
+                    damageDemon = random.nextInt(20) + 10 ;
                     damageHero *= 0.3;
                     demonHp -= damageHero ;
                     System.out.println("Вы ударили демона на " + damageHero + "hp");
-                    damagedemon *= 0.3;
-                    heroHp -= damagedemon ;
-                    System.out.println("Демон ударил вас на " + damagedemon + "hp");
+                    damageDemon *= 0.3;
+                    heroHp -= damageDemon ;
+                    System.out.println("Демон ударил вас на " + damageDemon + "hp");
                     break;
                 case "убежать":
                     if (god){
