@@ -5,14 +5,29 @@ import java.util.Random;
 // класс - это описание или чертеж по которому будут созданы объекты
 // свойства класса - набор переменных, которые будут доступны объекту
 // методы - действия
+// конструктор - метод который вызывется при создание объекта
 public class Employee {
 
     //fields - свойства
-    String name = "none";   //свойство-имя
-    int age = 0;            //свойство-возрас работника
-    double salary = 0.0;    //зарплата
-    int stage = 0;          //стаж
+    String name;      //свойство-имя
+    int age;          //свойство-возрас работника
+    double salary;    //зарплата
+    int stage;        //стаж
 
+
+    //Конструктор
+    Employee() {
+        this.name = "none";
+        this.age = 0;
+        this.salary = 0.0;
+        this.stage = 0;
+    }
+
+    Employee(String name, int age, double salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+    }
 
     //метод
     // [какой тип возращает метод] (void - метод не возвращает ничего)

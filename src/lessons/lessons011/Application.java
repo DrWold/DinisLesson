@@ -7,10 +7,7 @@ public class Application {
         //Выполнение программы отсюда
 
         //создание работника(объекта)
-        Employee emp1 = new Employee();
-        emp1.age = 20;
-        emp1.name = "Alex";
-        emp1.salary = 25000.0;
+        Employee emp1 = new Employee("Alex", 21, 25000.0);
         emp1.stage = 2;
         emp1.print();
 
