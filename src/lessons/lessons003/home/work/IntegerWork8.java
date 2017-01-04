@@ -23,7 +23,6 @@ public class IntegerWork8 {
         long pr; //переметр
         long pl; // площадь
         System.out.println("Введите кардинату x cтороны a");
-
         ax = scanner.nextInt();
         System.out.println("Введите кардинату y cтороны a");
         ay = scanner.nextInt();
