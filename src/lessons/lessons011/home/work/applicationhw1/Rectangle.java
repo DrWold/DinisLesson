@@ -4,12 +4,7 @@ package lessons.lessons011.home.work.applicationhw1;
 class Rectangle {
     double width;
     double height;
-    double ax;
-    double ay;
-    double bx;
-    double by;
-    double s;
-    double p;
+
 
     Rectangle(){
         this.width = 0;
@@ -22,22 +17,18 @@ class Rectangle {
     }
 
     Rectangle(double ax, double ay, double bx, double by){
-        this.ax = ax;
-        this.ay = ay;
-        this.bx = bx;
-        this.by = by;
         width = ax - ay;
         height = bx - by;
     }
 
     double area(){
 
-        return s = width * height;
+        return  width * height;
     }
     double perimeter(){
-        return p =  ((width + height) * 2);
+        return  ((width + height) * 2);
     }
     void print(){
-        System.out.println("ширина" + width + " высота " + height + " Ширина " + s + " Периметр " + p);
+        System.out.println("ширина" + width + " высота " + height + " Ширина " + area() + " Периметр " + perimeter());
     }
 }
