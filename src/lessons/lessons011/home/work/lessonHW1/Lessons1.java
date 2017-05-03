@@ -8,9 +8,9 @@ import java.util.Scanner;
 // Каждый класс хранит в себе кол-во жизней, урон и герой может хранить у себя кол-во зелей, которые он может пить
 // у каждого класса необходимо реализовать набор методов, к примеру выпить зелье или нанести удар противнику,
 // а также создать необходимые конструкторы
-public class lessons1 {
+public class Lessons1 {
     public static void main(String[] args) {
-        Heroes heroes = new Heroes(100, 3, 40, 40);
+        Hero hero = new Hero(100, 3, 40, 40);
         Demon demon = new Demon(500, 10, 20);
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -42,14 +42,14 @@ public class lessons1 {
         do {
             if (god) {
                 System.out.println("Вы бог");
-                heroes.hp = 1000000;
+                hero.hp = 1000000;
             }
             if (demon.hp < 0) {
                 System.out.println("Вы выйграли" + demon.hp + "здоровье демона");
                 return;
             }
-            if (heroes.hp < 0) {
-                System.out.println("Вы проиграли " + heroes.hp + "hp");
+            if (hero.hp < 0) {
+                System.out.println("Вы проиграли " + hero.hp + "hp");
                 return;
             }
 
@@ -70,7 +70,7 @@ public class lessons1 {
             switch (register) {
 
                 case "герой":
-                    System.out.println("здоровье героя " + heroes.hp);
+                    hero.printInfo();
                     break;
                 case "демон":
                     System.out.println("здоровье демона " + demon.hp);
@@ -80,28 +80,10 @@ public class lessons1 {
                         System.out.println("для бога это не нужно");
                         continue;
                     }
-                    if (heroes.hp == 100) {
-                        System.out.println("у вас полное здоровье ");
-                        continue;
-                    }
-                    if (heroes.potionHealing == 0) {
-                        System.out.println("нет зелей");
-                        continue;
-                    }
-                    System.out.println("Вы восстановили 50 hp");
-                    heroes.potionHealing--;
-                    System.out.println("У вас осталось зелей " + heroes.potionHealing);
-                    heroes.hp += 50;
-                    if (heroes.hp > 100) {
-                        heroes.hp = 100;
-                    }
+                    hero.usePotion();
                     break;
-
                 case "удар":
-                    System.out.println("Вы ударили демона на " + heroes.damage());
-                    demon.hp -= heroes.damage();
-                    System.out.println("и получили в ответ " + demon.damage());
-                    heroes.hp -= demon.damage();
+                    hero.fight(demon);
                     break;
                 case "кувырок":
                     int dodge;
@@ -112,15 +94,15 @@ public class lessons1 {
                         continue;
                     } else {
                         System.out.println("Вы не смогли увернуться");
-                        heroes.hp -= demon.damage();
+                        hero.hp -= demon.damage();
                         System.out.println("Демон нанес вам  " + demon.damage() + "hp");
                     }
                     break;
                 case "щит":
                     System.out.println("Вы поставили щит урон по вам снижен но и бьете вы тоже слабо");
-                    demon.hp -= heroes.damageGuard();
-                    System.out.println("Вы ударили демона на " + heroes.damageGuard() + "hp");
-                    heroes.hp -= demon.damageGuard();
+                    demon.hp -= hero.damageGuard();
+                    System.out.println("Вы ударили демона на " + hero.damageGuard() + "hp");
+                    hero.hp -= demon.damageGuard();
                     System.out.println("Демон ударил вас на " + demon.damageGuard() + "hp");
                     break;
                 case "убежать":
@@ -132,8 +114,7 @@ public class lessons1 {
                     return;
 
             }
-        }
-        while (true);
+        } while (true);
 
 
     }

@@ -14,13 +14,10 @@ public class Demon {
         this.damageMin = 0;
         this.damageMax = 0;
     }
-    Demon(int hp,  int damegMin , int damegMax){
-
+    Demon(int hp,  int damageMin , int damageMax){
         this.hp = hp;
-        this.damageMin = damegMin;
-        this.damageMax = damegMax;
-
-
+        this.damageMin = damageMin;
+        this.damageMax = damageMax;
     }
 
     int damage(){
@@ -29,9 +26,9 @@ public class Demon {
         return damageDemon;
     }
     int damageGuard() {
-        int damageGuardeDemon;
-        damageGuardeDemon = random.nextInt(damageMin) + damageMax;
-        return damageGuardeDemon *= 0.3;
+        int damageGuardDemon;
+        damageGuardDemon = random.nextInt(damageMin) + damageMax;
+        return (int) (damageGuardDemon * 0.3);
      }
 
     }
