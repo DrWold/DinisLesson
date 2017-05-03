@@ -13,7 +13,6 @@ public class Hero {
     Random random = new Random();
     int hp;
     Potion[] potions = null;
-    //int potionHealing; // кол-во лечебных зелей у героя
     int damageMin; //Минимальный урон героя
     int damageMax; // Максимальный урон героя
 
@@ -51,7 +50,7 @@ public class Hero {
         System.out.println("Вы восстановили 50 hp");
         potionHealing--;
         System.out.println("У вас осталось зелей " + potionHealing);
-        hp += 50;
+        hp += 50; // Исправить число 50, читать из класса зелья
         if (hp > 100) {
             hp = 100;
         }
