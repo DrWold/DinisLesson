@@ -10,11 +10,10 @@ import java.util.Scanner;
 // а также создать необходимые конструкторы
 public class Lessons1 {
     public static void main(String[] args) {
-        Hero hero = new Hero(100, 3, 40, 40);
+        Hero hero = new Hero(100, 4, 40, 40);
         Demon demon = new Demon(500, 10, 20);
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
-
         char answer;
         String answer2;// ответ действия
 
@@ -27,7 +26,7 @@ public class Lessons1 {
                 god = true;
             }
         }
-
+            int result;
         ////////////////////////////////////////////////////
 
 
@@ -44,13 +43,8 @@ public class Lessons1 {
                 System.out.println("Вы бог");
                 hero.hp = 1000000;
             }
-            if (demon.hp < 0) {
-                System.out.println("Вы выйграли" + demon.hp + "здоровье демона");
-                return;
-            }
-            if (hero.hp < 0) {
-                System.out.println("Вы проиграли " + hero.hp + "hp");
-                return;
+            if (hero.result == 1) {
+                System.out.println("Проиграл");
             }
 
             System.out.println("");
@@ -80,10 +74,11 @@ public class Lessons1 {
                         System.out.println("для бога это не нужно");
                         continue;
                     }
-                    hero.usePotion();
+                   hero.usePotion();
                     break;
                 case "удар":
-                    hero.fight(demon);
+                    result = hero.fight(demon);
+
                     break;
                 case "кувырок":
                     int dodge;
@@ -99,11 +94,7 @@ public class Lessons1 {
                     }
                     break;
                 case "щит":
-                    System.out.println("Вы поставили щит урон по вам снижен но и бьете вы тоже слабо");
-                    demon.hp -= hero.damageGuard();
-                    System.out.println("Вы ударили демона на " + hero.damageGuard() + "hp");
-                    hero.hp -= demon.damageGuard();
-                    System.out.println("Демон ударил вас на " + demon.damageGuard() + "hp");
+                    hero.fightGuard(demon);
                     break;
                 case "убежать":
                     if (god) {

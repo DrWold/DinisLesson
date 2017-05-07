@@ -8,6 +8,7 @@ public class Demon {
     int hp;
     int damageMin; //Минимальный урон Демона
     int damageMax; // Максимальный урон Демона
+    int damageDemon;
 
     Demon (){
         this.hp = 0;
@@ -21,9 +22,8 @@ public class Demon {
     }
 
     int damage(){
-        int damageDemon;
         damageDemon = random.nextInt(damageMin) + damageMax;
-        return damageDemon;
+        return 0;
     }
     int damageGuard() {
         int damageGuardDemon;

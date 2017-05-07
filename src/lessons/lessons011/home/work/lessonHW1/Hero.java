@@ -12,29 +12,32 @@ import java.util.Random;
 public class Hero {
     Random random = new Random();
     int hp;
-    Potion[] potions = null;
+    Potion [] potions = null;
     int damageMin; //Минимальный урон героя
     int damageMax; // Максимальный урон героя
+    int result;
+    int damageHero;
 
     Hero() {
         this.hp = 0;
         this.damageMin = 0;
         this.damageMax = 0;
-        this.potionHealing = 0;
-        potions = new Potion[3];
+
     }
 
     Hero(int hp, int potionHealing, int damageMin, int damageMax) {
         this.hp = hp;
         this.potions = new Potion[potionHealing];
-//        this.potionHealing = potionHealing;
+        for (int i = 0; i <potionHealing ; i++) {
+            this.potions[i] = new Potion(50);
+        }
         this.damageMin = damageMin;
         this.damageMax = damageMax;
     }
 
     void printInfo() {
         System.out.println("Здоровье героя: " + hp);
-        System.out.println("Кол-во зелей: " + potionHealing);
+        System.out.println("Кол-во зелей: " + potions.length);
     }
 
     void usePotion() {
@@ -43,31 +46,55 @@ public class Hero {
             return;
         }
 
-        if (potionHealing == 0) {
+        if (potions.length ==0) {
             System.out.println("нет зелей");
             return;
         }
-        System.out.println("Вы восстановили 50 hp");
-        potionHealing--;
-        System.out.println("У вас осталось зелей " + potionHealing);
-        hp += 50; // Исправить число 50, читать из класса зелья
+        Potion current = potions[0];
+        System.out.println("Вы восстановили " + current.recoveryHp + " Hp");
+        Potion[] dest = new Potion[potions.length -1];
+        System.arraycopy( potions, 1, dest, 0, potions.length -1 );
+        potions = dest;
+
+
+        System.out.println("У вас осталось зелей " + potions.length);
+        hp += current.recoveryHp; // Исправить число 50, читать из класса зелья
         if (hp > 100) {
             hp = 100;
         }
+
     }
 
-    void fight(Demon demon) {
+    int fight(Demon demon) {
         // Логика боя
-        System.out.println("Вы ударили демона на " + hero.damage());
-        demon.hp -= hero.damage();
-        System.out.println("и получили в ответ " + demon.damage());
-        hero.hp -= demon.damage();
+        damage();
+        demon.hp -= damageHero;
+        System.out.println("Вы ударили демона на " + damageHero);
+        demon.damage();
+        hp -= demon.damageDemon;
+        System.out.println("и получили в ответ " + demon.damageDemon);
+
+        if (hp < 0){
+           return result = 1;
+        }
+        if (demon.hp < 0);
+           return result = 2;
     }
+     void fightGuard(Demon demon) {
+
+
+         System.out.println("Вы поставили щит урон по вам снижен но и бьете вы тоже слабо");
+         demon.hp -= damageGuard();
+         System.out.println("Вы ударили демона на " + damageGuard() + "hp");
+         hp -= demon.damageGuard();
+         System.out.println("Демон ударил вас на " + demon.damageGuard() + "hp");
+
+
+         }
 
     int damage() {
-        int damageHero;
         damageHero = random.nextInt(damageMin) + damageMax;
-        return damageHero;
+        return 0;
     }
 
     int damageGuard() {
@@ -77,4 +104,6 @@ public class Hero {
     }
 
 
-}
+    }
+
+
