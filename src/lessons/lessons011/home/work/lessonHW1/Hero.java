@@ -15,21 +15,22 @@ public class Hero {
     Potion [] potions = null;
     int damageMin; //Минимальный урон героя
     int damageMax; // Максимальный урон героя
-    int result;
-    int damageHero;
+
+
 
     Hero() {
         this.hp = 0;
         this.damageMin = 0;
         this.damageMax = 0;
+        this.potions = new Potion[0];
 
     }
 
-    Hero(int hp, int potionHealing, int damageMin, int damageMax) {
+    Hero(int hp, int potionHealing, int damageMin, int damageMax ) {
         this.hp = hp;
         this.potions = new Potion[potionHealing];
         for (int i = 0; i <potionHealing ; i++) {
-            this.potions[i] = new Potion(50);
+            this.potions[i] = new Potion();
         }
         this.damageMin = damageMin;
         this.damageMax = damageMax;
@@ -65,36 +66,45 @@ public class Hero {
 
     }
 
-    int fight(Demon demon) {
+    void fight(Demon demon) {
         // Логика боя
-        damage();
-        demon.hp -= damageHero;
-        System.out.println("Вы ударили демона на " + damageHero);
-        demon.damage();
-        hp -= demon.damageDemon;
-        System.out.println("и получили в ответ " + demon.damageDemon);
-
-        if (hp < 0){
-           return result = 1;
-        }
-        if (demon.hp < 0);
-           return result = 2;
+        int tempDamage = damage();
+        demon.hp -= tempDamage;
+        System.out.println("Вы ударили демона на " + tempDamage);
+        int tempDemon = demon.damage();
+        hp -= tempDemon;
+        System.out.println("и получили в ответ " + tempDemon);
     }
-     void fightGuard(Demon demon) {
 
 
-         System.out.println("Вы поставили щит урон по вам снижен но и бьете вы тоже слабо");
-         demon.hp -= damageGuard();
-         System.out.println("Вы ударили демона на " + damageGuard() + "hp");
-         hp -= demon.damageGuard();
-         System.out.println("Демон ударил вас на " + demon.damageGuard() + "hp");
+
+//     void fightGuard(Demon demon) {
+//
+//
+//         int result;
+//         int tempDamageGuard = damage();
+//         demon.hp -= tempDamageGuard;
+//         System.out.println("Вы ударили демона на " + tempDamage);
+//         int tempDemon = demon.damage();
+//         hp -= tempDemon;
+//         System.out.println("и получили в ответ " + tempDemon);
+//
+//         if (hp < 0) {
+//             System.out.println("проиграл");
+//             return result = 0;
+//         }
+//         if (demon.hp < 0) ;
+//         System.out.println("выйграл");
+//         return result = 0;
+//     }
 
 
-         }
+
 
     int damage() {
+        int damageHero;
         damageHero = random.nextInt(damageMin) + damageMax;
-        return 0;
+        return damageHero;
     }
 
     int damageGuard() {

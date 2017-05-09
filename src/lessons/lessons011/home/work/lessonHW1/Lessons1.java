@@ -10,7 +10,8 @@ import java.util.Scanner;
 // а также создать необходимые конструкторы
 public class Lessons1 {
     public static void main(String[] args) {
-        Hero hero = new Hero(100, 4, 40, 40);
+
+        Hero hero = new Hero(50, 4, 54, 54);
         Demon demon = new Demon(500, 10, 20);
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
@@ -43,9 +44,8 @@ public class Lessons1 {
                 System.out.println("Вы бог");
                 hero.hp = 1000000;
             }
-            if (hero.result == 1) {
-                System.out.println("Проиграл");
-            }
+
+
 
             System.out.println("");
             System.out.println("Введите команду ");
@@ -54,7 +54,7 @@ public class Lessons1 {
             System.out.println("зелье : Выпить зелье ");
             System.out.println("удар : Ударить демона ");
             System.out.println("кувырок : Сделать кувырок ");
-            System.out.println("щит : Поставить щит ");
+            //System.out.println("щит : Поставить щит ");
             System.out.println("убежать : (выход)");
             System.out.println();
 
@@ -78,7 +78,7 @@ public class Lessons1 {
                     break;
                 case "удар":
                     result = hero.fight(demon);
-
+                    if (result == 1) {return;}
                     break;
                 case "кувырок":
                     int dodge;
@@ -93,9 +93,9 @@ public class Lessons1 {
                         System.out.println("Демон нанес вам  " + demon.damage() + "hp");
                     }
                     break;
-                case "щит":
-                    hero.fightGuard(demon);
-                    break;
+//                case "щит":
+//                    hero.fightGuard(demon);
+//                    break;
                 case "убежать":
                     if (god) {
                         System.out.println("Не смеши");
