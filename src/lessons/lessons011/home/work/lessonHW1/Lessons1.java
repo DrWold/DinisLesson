@@ -98,7 +98,7 @@ public class Lessons1 {
 //                    break;
                 case "убежать":
                     if (god) {
-                        System.out.println("Не смеши");
+                  System.out.println("Не смеши");
                         continue;
                     }
                     System.out.println("Ты трус");

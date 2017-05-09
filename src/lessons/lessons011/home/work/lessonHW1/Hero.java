@@ -66,15 +66,27 @@ public class Hero {
 
     }
 
-    void fight(Demon demon) {
+    int fight(Demon demon) {
         // Логика боя
+        int result = 0;
         int tempDamage = damage();
         demon.hp -= tempDamage;
         System.out.println("Вы ударили демона на " + tempDamage);
         int tempDemon = demon.damage();
         hp -= tempDemon;
         System.out.println("и получили в ответ " + tempDemon);
+        if (hp < 0) {
+            result = 1;
+            System.out.println("Проиграл");
+        }
+        if (demon.hp < 0) {
+            result = 1;
+            System.out.println("Выйграл");
+        }
+        return result;
     }
+
+
 
 
 
