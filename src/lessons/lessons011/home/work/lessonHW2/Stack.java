@@ -23,32 +23,25 @@ public class Stack {
 
 
         } else {
-            int resurs = 0;
-            resurs++;
-            for (int i = 0; i < resurs; i++) {
+
                 testStacks++;
                 stck[testStacks] = testStacks;
 
 
             }
         }
-    }
 
 
-//    int pop() {
-//        if (testStacks == 0) {
-//            System.out.println("стек отсутсвует");
-//            return 0;
-//        } else {
-//            int resurs = 0;
-//            resurs++;
-//            for (int i = 0; i < resurs; i++) {
-//                testStacks--;
-//                stck[i] = testStacks;
-//            } return testStacks;
-//
-//        }
 
+    int pop() {
+        if (testStacks == 0) {
+            System.out.println("стек отсутсвует");
+            return 0;
+        } else {
+
+        } return stck[testStacks--];
 
     }
+
+
 }

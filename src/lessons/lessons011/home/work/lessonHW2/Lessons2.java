@@ -10,9 +10,10 @@ package lessons.lessons011.home.work.lessonHW2;
 public class Lessons2 {
     public static void main(String[] args) {
         Stack test = new Stack();
-        for (int i = 0; i <10 ; i++) test.push(i);
+        StakBOOK book = new StakBOOK();
+        for (int i = 0; i <10 ; i++) book.push(i);
         for (int i = 0; i <10 ; i++) {
-        System.out.println(test.pop());
+        System.out.println(book.pop());
 
         }
 
