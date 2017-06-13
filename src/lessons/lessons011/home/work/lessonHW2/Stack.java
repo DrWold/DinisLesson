@@ -1,4 +1,5 @@
 package lessons.lessons011.home.work.lessonHW2;
+
 // Создать класс - целочисленный стек
 // класс основывается на целочисленном массиве
 // у класса должно быть 3 метода
@@ -8,51 +9,49 @@ package lessons.lessons011.home.work.lessonHW2;
 // узкнать пустой ли стек
 //Для того чтобы твой код отличался от книжного, добавь к стеку метод который будет 1) очищать стек void clear(){} 2) копирует стек из другого стека void copy(Stack original){}
 public class Stack {
-   private int stck[] = null;
-   private int indexTop = 0;
-   private int mSize = 0;
+    private int stck[] = null;
+    private int indexTop = -1;
+
 
     Stack() {
-        int stck[] = new int[10];
-        this.indexTop = 0;
+        this.stck = new int[10];
     }
-    Stack(int n ){
-        this.mSize = n;
-        int stck[] = new int [mSize] ;
+
+    Stack(int n) {
+        this.stck = new int[n];
     }
 
     void push(int value) {
-        if (stackFull()) {
+
+        if (isFull()) {
             System.out.println("Стек полон");
-
-
         } else {
-                stck[++indexTop] = value;
-
-
-            }
+            stck[++indexTop] = value;
         }
-
-
+    }
 
     int pop() {
-        if (indexTop == 0) {
+
+        if (indexTop < 0) {
             System.out.println("стек отсутсвует");
+        }
 
-        } else {
-
-        } return stck[indexTop--];
-
+        return stck[indexTop--];
     }
-    boolean stackFull(){
+
+    boolean isFull() {
         return indexTop == stck.length - 1;
     }
-    int clearStack(){
-        return indexTop = 0;
+
+    int clearStack() {
+        return indexTop = -1;
     }
-//    Stack copy(){
-//        int obj [] = new int[mSize];
-//        System.arraycopy(stck, 0 , obj , 0 ,stck.length);
-//
-//    }
+
+    Stack copy(){
+        Stack resualt = new Stack();
+        resualt.indexTop = indexTop;
+        resualt.stck = new int[stck.length];
+        System.arraycopy(stck, 0 , resualt.stck , 0 , stck.length);
+        return resualt;
+    }
 }

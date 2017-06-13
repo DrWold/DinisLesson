@@ -9,16 +9,15 @@ package lessons.lessons011.home.work.lessonHW2;
 // узкнать пустой ли стек
 public class Lessons2 {
     public static void main(String[] args) {
-        Stack test = new Stack();
-        StakBOOK book = new StakBOOK();
-        for (int i = 0; i <10 ; i++) book.push(i);
-        for (int i = 0; i <10 ; i++) {
-        System.out.println(book.pop());
-
+        Stack test = new Stack(2);
+        for (int i = 0; i < 2; i++) test.push(-1);
+        for (int i = 0; i <2 ; i++) {
+            System.out.println(test.pop());
         }
 
+    }
 
 
-    }
-    }
+}
+
 
