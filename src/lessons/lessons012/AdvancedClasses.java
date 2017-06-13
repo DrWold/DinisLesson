@@ -20,5 +20,7 @@ public class AdvancedClasses {
 
         SingletonConnection connection = SingletonConnection.createConnection("gdfhdfh", "dasfasg", "123123");
         connection.executeSql("select * from users;");
+        Math.abs(2);
+        new JavaDoc().test(2, 2);
     }
 }
